@@ -1,0 +1,21 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+input[type=submit], input[type=button], button {
+    width: 300px;
+    margin-top: 15px;
+}
+
+button {
+    width: 300px;
+    margin-top: 15px;
+}
+
+.ESPACO {
+    margin-top: 25px;
+}
+
+

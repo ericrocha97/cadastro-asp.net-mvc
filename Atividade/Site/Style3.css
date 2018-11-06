@@ -1,0 +1,14 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type=submit], input[type=button], #btexcluir {
+    width: 270px;
+    margin-top: 15px;
+}
+
+.ESPACO{
+    margin-top:25px;
+}
+
+

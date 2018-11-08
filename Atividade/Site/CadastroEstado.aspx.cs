@@ -22,7 +22,7 @@ namespace Atividade.Views
 
         public void PreencherGridMySQL()
         {
-            string connectionString = @"Server=localhost;Database=atividade;Uid=root;Pwd=poi098zxc123";
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
             MySqlConnection cnx = new MySqlConnection(connectionString); //instancia  conexão.
 
             connDataSet = new DataSet();
@@ -30,7 +30,7 @@ namespace Atividade.Views
             
 
             // sql consulta
-            string sql = "select * from estados";
+            string sql = "select * from estado";
             // abre a conexao
             cnx.Open();
             // cria o comando
@@ -79,11 +79,11 @@ namespace Atividade.Views
         
         private void GravarBanco()
         {
-            string connectionString = @"Server=localhost;Database=atividade;Uid=root;Pwd=poi098zxc123";
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
             MySqlConnection cnx = new MySqlConnection(connectionString); //instancia  conexão.
             cnx.Open();
             MySqlCommand comm = cnx.CreateCommand();
-            comm.CommandText = "INSERT INTO estados(`nome`,`UF`) VALUES(@nome, @UF)"; 
+            comm.CommandText = "INSERT INTO estado(`nome`,`UF`) VALUES(@nome, @UF)"; 
             comm.Parameters.AddWithValue("@nome", TextBoxNome.Text);
             comm.Parameters.AddWithValue("@UF", TextBoxUF.Text);
             comm.ExecuteNonQuery();
@@ -123,11 +123,11 @@ namespace Atividade.Views
 
         private void ExcluirBanco()
         {
-            string connectionString = @"Server=localhost;Database=atividade;Uid=root;Pwd=poi098zxc123";
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
             MySqlConnection cnxdel = new MySqlConnection(connectionString); //instancia  conexão.
             cnxdel.Open();
             MySqlCommand del = cnxdel.CreateCommand();
-            del.CommandText = "DELETE FROM estados WHERE codigo = @id";
+            del.CommandText = "DELETE FROM estado WHERE codigo = @id";
             del.Parameters.AddWithValue("@id", TextBoxIdEx.Text);
             del.ExecuteNonQuery();
             cnxdel.Close();
@@ -136,6 +136,28 @@ namespace Atividade.Views
         protected void ButtonVoltar(object sender, EventArgs e)
         {
             Response.Redirect("Index.aspx");
+        }
+
+        protected void ButtonPesquisar(object sender, EventArgs e)
+        {
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
+            MySqlConnection cnx = new MySqlConnection(connectionString); //instancia  conexão.
+            // sql consulta
+            string sql = "SELECT * FROM `estado` WHERE `nome` LIKE @nome";
+            // abre a conexao
+            cnx.Open();
+            // cria o comando
+            MySqlCommand cmd = new MySqlCommand(sql, cnx);
+            cmd.Parameters.AddWithValue("@nome", TextBoxPesquisa.Text);
+            // cria a tabela de dados
+            DataTable data = new DataTable();
+            //carrega a tabela com os dados
+            data.Load(cmd.ExecuteReader());
+            //fecha conexao
+            cnx.Close();
+            // carega a grid com a tabela
+            GridEstado.DataSource = data;
+            GridEstado.DataBind();
         }
     }
 }

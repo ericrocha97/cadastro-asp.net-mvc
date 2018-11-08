@@ -20,7 +20,7 @@ namespace Atividade.Views
 
         public void PreencherGridMySQL()
         {
-            string connectionString = @"Server=localhost;Database=atividade;Uid=root;Pwd=poi098zxc123";
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
             MySqlConnection cnx = new MySqlConnection(connectionString); //instancia  conexão.
 
             connDataSet = new DataSet();
@@ -67,7 +67,7 @@ namespace Atividade.Views
             List<Cliente> ListaClientes = new List<Cliente>();
             Cliente cadastro = new Cliente
             {
-                Id = int.Parse(TextBoxID.Text),
+                //Id = int.Parse(TextBoxID.Text),
                 Nome = TextBoxNome.Text,
                 Endereco = TextBoxEndereco.Text,
                 Cidade = TextBoxCidade.Text
@@ -79,7 +79,7 @@ namespace Atividade.Views
 
         private void GravarBanco()
         {
-            string connectionString = @"Server=localhost;Database=atividade;Uid=root;Pwd=poi098zxc123";
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
             MySqlConnection cnx = new MySqlConnection(connectionString); //instancia  conexão.
             cnx.Open();
             MySqlCommand comm = cnx.CreateCommand();
@@ -118,7 +118,7 @@ namespace Atividade.Views
 
         private void ExcluirBanco()
         {
-            string connectionString = @"Server=localhost;Database=atividade;Uid=root;Pwd=poi098zxc123";
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
             MySqlConnection cnxdel = new MySqlConnection(connectionString); //instancia  conexão.
             cnxdel.Open();
             MySqlCommand del = cnxdel.CreateCommand();
@@ -131,6 +131,28 @@ namespace Atividade.Views
         protected void ButtonVoltar(object sender, EventArgs e)
         {
             Response.Redirect("Index.aspx");
+        }
+
+        protected void ButtonPesquisar(object sender, EventArgs e)
+        {
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
+            MySqlConnection cnx = new MySqlConnection(connectionString); //instancia  conexão.
+            // sql consulta
+            string sql = "SELECT * FROM `clientes` WHERE `nome` LIKE @nome";
+            // abre a conexao
+            cnx.Open();
+            // cria o comando
+            MySqlCommand cmd = new MySqlCommand(sql, cnx);
+            cmd.Parameters.AddWithValue("@nome", TextBoxPesquisa.Text);
+            // cria a tabela de dados
+            DataTable data = new DataTable();
+            //carrega a tabela com os dados
+            data.Load(cmd.ExecuteReader());
+            //fecha conexao
+            cnx.Close();
+            // carega a grid com a tabela
+            GridCliente.DataSource = data;
+            GridCliente.DataBind();
         }
     }
 }

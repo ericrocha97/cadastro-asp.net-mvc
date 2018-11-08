@@ -115,3 +115,4 @@ C:\Users\Eric Rocha - Espyl\Documents\Visual Studio 2017\Projects\Atividade\Ativ
 C:\Users\Eric Rocha - Espyl\Documents\Visual Studio 2017\Projects\Atividade\Atividade\bin\MySql.Data.Entity.EF6.xml
 C:\Users\Eric Rocha - Espyl\Documents\Visual Studio 2017\Projects\Atividade\Atividade\bin\Google.Protobuf.dll
 C:\Users\Eric Rocha - Espyl\Documents\Visual Studio 2017\Projects\Atividade\Atividade\bin\Google.Protobuf.xml
+C:\Users\Eric Rocha - Espyl\Documents\Visual Studio 2017\Projects\Atividade\Atividade\obj\Debug\Atividade.csprojAssemblyReference.cache

@@ -17,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/my-login.css">
 </head>
-    <!-- Alteração de teste -->
 <body class="my-login-page bg-dark">
     <section class="h-100">
         <div class="container h-100">

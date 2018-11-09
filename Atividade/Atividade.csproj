@@ -196,6 +196,13 @@
     <Compile Include="Site\CadastroEstado.aspx.designer.cs">
       <DependentUpon>CadastroEstado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Site\CadastroProduto.aspx.cs">
+      <DependentUpon>CadastroProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\CadastroProduto.aspx.designer.cs">
+      <DependentUpon>CadastroProduto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -266,6 +273,7 @@
     <Content Include="Site\CadastroCidade.aspx" />
     <Content Include="Site\CadastroCliente.aspx" />
     <Content Include="Site\CadastroEstado.aspx" />
+    <Content Include="Site\CadastroProduto.aspx" />
     <Content Include="Site\Index.aspx" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />

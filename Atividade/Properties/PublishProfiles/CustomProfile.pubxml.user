@@ -11,22 +11,22 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
-      <publishTime>05/11/2018 08:39:15</publishTime>
+      <publishTime>11/05/2018 08:39:15</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>10/09/2013 16:29:20</publishTime>
+      <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>10/09/2013 16:29:20</publishTime>
+      <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
-      <publishTime>05/11/2018 08:39:15</publishTime>
+      <publishTime>11/05/2018 08:39:15</publishTime>
     </File>
     <File Include="bin/Atividade.dll">
-      <publishTime>11/08/2018 21:05:21</publishTime>
+      <publishTime>11/09/2018 17:03:56</publishTime>
     </File>
     <File Include="bin/Atividade.pdb">
-      <publishTime>11/08/2018 21:05:21</publishTime>
+      <publishTime>11/09/2018 17:03:56</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/23/2017 13:15:18</publishTime>
@@ -35,7 +35,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>10/23/2017 13:15:20</publishTime>
     </File>
     <File Include="bin/Google.Protobuf.dll">
-      <publishTime>10/08/2018 18:51:54</publishTime>
+      <publishTime>08/10/2018 18:51:54</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>06/27/2017 12:59:34</publishTime>
@@ -65,10 +65,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>04/24/2018 12:47:40</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.TelemetryCorrelation.dll">
-      <publishTime>05/09/2018 20:11:08</publishTime>
+      <publishTime>09/05/2018 20:11:08</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>05/09/2018 16:10:50</publishTime>
+      <publishTime>09/05/2018 16:10:50</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>07/25/2012 11:48:56</publishTime>
@@ -77,31 +77,31 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/26/2018 06:42:22</publishTime>
     </File>
     <File Include="bin/MySql.Data.Entity.EF6.dll">
-      <publishTime>07/08/2018 02:22:26</publishTime>
+      <publishTime>08/07/2018 02:22:26</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>03/24/2018 17:44:14</publishTime>
     </File>
     <File Include="bin/pt-br/System.Web.Helpers.resources.dll">
-      <publishTime>10/05/2018 22:43:02</publishTime>
+      <publishTime>05/10/2018 22:43:02</publishTime>
     </File>
     <File Include="bin/pt-br/System.Web.Mvc.resources.dll">
-      <publishTime>10/05/2018 22:38:28</publishTime>
+      <publishTime>05/10/2018 22:38:28</publishTime>
     </File>
     <File Include="bin/pt-br/System.Web.Optimization.resources.dll">
-      <publishTime>11/02/2014 15:28:42</publishTime>
+      <publishTime>02/11/2014 15:28:42</publishTime>
     </File>
     <File Include="bin/pt-br/System.Web.Razor.resources.dll">
-      <publishTime>10/05/2018 22:38:50</publishTime>
+      <publishTime>05/10/2018 22:38:50</publishTime>
     </File>
     <File Include="bin/pt-br/System.Web.WebPages.Deployment.resources.dll">
-      <publishTime>10/05/2018 22:43:02</publishTime>
+      <publishTime>05/10/2018 22:43:02</publishTime>
     </File>
     <File Include="bin/pt-br/System.Web.WebPages.Razor.resources.dll">
-      <publishTime>10/05/2018 22:43:02</publishTime>
+      <publishTime>05/10/2018 22:43:02</publishTime>
     </File>
     <File Include="bin/pt-br/System.Web.WebPages.resources.dll">
-      <publishTime>10/05/2018 22:43:02</publishTime>
+      <publishTime>05/10/2018 22:43:02</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -143,10 +143,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>08/08/2018 12:09:42</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
-      <publishTime>05/12/2017 09:36:44</publishTime>
+      <publishTime>12/05/2017 09:36:44</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
-      <publishTime>05/12/2017 09:36:44</publishTime>
+      <publishTime>12/05/2017 09:36:44</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
       <publishTime>08/08/2018 12:09:42</publishTime>
@@ -155,85 +155,85 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>08/08/2018 12:09:42</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
-      <publishTime>05/11/2016 18:55:32</publishTime>
+      <publishTime>11/05/2016 18:55:32</publishTime>
     </File>
     <File Include="bin/roslyn/System.AppContext.dll">
-      <publishTime>05/11/2016 18:55:34</publishTime>
+      <publishTime>11/05/2016 18:55:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
       <publishTime>05/16/2018 03:29:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Console.dll">
-      <publishTime>05/11/2016 18:55:48</publishTime>
+      <publishTime>11/05/2016 18:55:48</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
-      <publishTime>05/11/2016 18:55:52</publishTime>
+      <publishTime>11/05/2016 18:55:52</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
-      <publishTime>05/11/2016 18:55:56</publishTime>
+      <publishTime>11/05/2016 18:55:56</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
-      <publishTime>05/11/2016 18:55:52</publishTime>
+      <publishTime>11/05/2016 18:55:52</publishTime>
     </File>
     <File Include="bin/roslyn/System.Globalization.Calendars.dll">
-      <publishTime>05/11/2016 18:56:02</publishTime>
+      <publishTime>11/05/2016 18:56:02</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.Compression.dll">
-      <publishTime>05/11/2016 18:56:08</publishTime>
+      <publishTime>11/05/2016 18:56:08</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
-      <publishTime>05/11/2016 18:56:04</publishTime>
+      <publishTime>11/05/2016 18:56:04</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.dll">
-      <publishTime>05/11/2016 18:56:08</publishTime>
+      <publishTime>11/05/2016 18:56:08</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
-      <publishTime>05/11/2016 18:56:08</publishTime>
+      <publishTime>11/05/2016 18:56:08</publishTime>
     </File>
     <File Include="bin/roslyn/System.Net.Http.dll">
-      <publishTime>05/11/2016 18:56:30</publishTime>
+      <publishTime>11/05/2016 18:56:30</publishTime>
     </File>
     <File Include="bin/roslyn/System.Net.Sockets.dll">
-      <publishTime>05/11/2016 18:56:34</publishTime>
+      <publishTime>11/05/2016 18:56:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
       <publishTime>05/16/2018 03:29:44</publishTime>
     </File>
     <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
-      <publishTime>05/11/2016 18:57:00</publishTime>
+      <publishTime>11/05/2016 18:57:00</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
-      <publishTime>05/11/2016 18:57:14</publishTime>
+      <publishTime>11/05/2016 18:57:14</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
-      <publishTime>05/11/2016 18:57:08</publishTime>
+      <publishTime>11/05/2016 18:57:08</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
-      <publishTime>05/11/2016 18:57:18</publishTime>
+      <publishTime>11/05/2016 18:57:18</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
-      <publishTime>05/11/2016 18:57:18</publishTime>
+      <publishTime>11/05/2016 18:57:18</publishTime>
     </File>
     <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
-      <publishTime>05/11/2016 18:57:20</publishTime>
+      <publishTime>11/05/2016 18:57:20</publishTime>
     </File>
     <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
-      <publishTime>05/11/2016 18:57:24</publishTime>
+      <publishTime>11/05/2016 18:57:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.ValueTuple.dll">
-      <publishTime>05/11/2016 18:57:30</publishTime>
+      <publishTime>11/05/2016 18:57:30</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
-      <publishTime>05/11/2016 18:57:36</publishTime>
+      <publishTime>11/05/2016 18:57:36</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
-      <publishTime>05/11/2016 18:57:34</publishTime>
+      <publishTime>11/05/2016 18:57:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.XPath.dll">
-      <publishTime>05/11/2016 18:57:40</publishTime>
+      <publishTime>11/05/2016 18:57:40</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
-      <publishTime>05/11/2016 18:57:34</publishTime>
+      <publishTime>11/05/2016 18:57:34</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -254,64 +254,64 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/18/2018 19:38:16</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>10/05/2018 22:42:40</publishTime>
+      <publishTime>05/10/2018 22:42:40</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>10/05/2018 22:38:08</publishTime>
+      <publishTime>05/10/2018 22:38:08</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>11/02/2014 16:26:04</publishTime>
+      <publishTime>02/11/2014 16:26:04</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>10/05/2018 22:38:32</publishTime>
+      <publishTime>05/10/2018 22:38:32</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>10/05/2018 22:42:40</publishTime>
+      <publishTime>05/10/2018 22:42:40</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>10/05/2018 22:42:40</publishTime>
+      <publishTime>05/10/2018 22:42:40</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
-      <publishTime>10/05/2018 22:42:40</publishTime>
+      <publishTime>05/10/2018 22:42:40</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 14:57:34</publishTime>
     </File>
     <File Include="Content/bootstrap-grid.css">
-      <publishTime>05/11/2018 08:39:10</publishTime>
+      <publishTime>11/05/2018 08:39:10</publishTime>
     </File>
     <File Include="Content/bootstrap-grid.css.map">
-      <publishTime>05/11/2018 08:39:09</publishTime>
+      <publishTime>11/05/2018 08:39:09</publishTime>
     </File>
     <File Include="Content/bootstrap-grid.min.css">
-      <publishTime>05/11/2018 08:39:09</publishTime>
+      <publishTime>11/05/2018 08:39:09</publishTime>
     </File>
     <File Include="Content/bootstrap-grid.min.css.map">
-      <publishTime>05/11/2018 08:39:09</publishTime>
+      <publishTime>11/05/2018 08:39:09</publishTime>
     </File>
     <File Include="Content/bootstrap-reboot.css">
-      <publishTime>05/11/2018 08:39:09</publishTime>
+      <publishTime>11/05/2018 08:39:09</publishTime>
     </File>
     <File Include="Content/bootstrap-reboot.css.map">
-      <publishTime>05/11/2018 08:39:09</publishTime>
+      <publishTime>11/05/2018 08:39:09</publishTime>
     </File>
     <File Include="Content/bootstrap-reboot.min.css">
-      <publishTime>05/11/2018 08:39:09</publishTime>
+      <publishTime>11/05/2018 08:39:09</publishTime>
     </File>
     <File Include="Content/bootstrap-reboot.min.css.map">
-      <publishTime>05/11/2018 08:39:09</publishTime>
+      <publishTime>11/05/2018 08:39:09</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>05/11/2018 08:39:09</publishTime>
+      <publishTime>11/05/2018 08:39:09</publishTime>
     </File>
     <File Include="Content/bootstrap.css.map">
-      <publishTime>05/11/2018 08:39:09</publishTime>
+      <publishTime>11/05/2018 08:39:09</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>05/11/2018 08:39:09</publishTime>
+      <publishTime>11/05/2018 08:39:09</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css.map">
-      <publishTime>05/11/2018 08:39:09</publishTime>
+      <publishTime>11/05/2018 08:39:09</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>10/29/2018 20:05:47</publishTime>
@@ -323,52 +323,52 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>10/29/2018 20:05:47</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
-      <publishTime>05/11/2018 08:39:09</publishTime>
+      <publishTime>11/05/2018 08:39:09</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js.map">
-      <publishTime>05/11/2018 08:39:08</publishTime>
+      <publishTime>11/05/2018 08:39:08</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.min.js">
-      <publishTime>05/11/2018 08:39:08</publishTime>
+      <publishTime>11/05/2018 08:39:08</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.min.js.map">
-      <publishTime>05/11/2018 08:39:08</publishTime>
+      <publishTime>11/05/2018 08:39:08</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>05/11/2018 08:39:08</publishTime>
+      <publishTime>11/05/2018 08:39:08</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js.map">
-      <publishTime>05/11/2018 08:39:08</publishTime>
+      <publishTime>11/05/2018 08:39:08</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>05/11/2018 08:39:08</publishTime>
+      <publishTime>11/05/2018 08:39:08</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js.map">
-      <publishTime>05/11/2018 08:39:08</publishTime>
+      <publishTime>11/05/2018 08:39:08</publishTime>
     </File>
     <File Include="Scripts/esm/popper-utils.js">
-      <publishTime>05/11/2018 08:39:56</publishTime>
+      <publishTime>11/05/2018 08:39:56</publishTime>
     </File>
     <File Include="Scripts/esm/popper-utils.js.map">
-      <publishTime>05/11/2018 08:39:56</publishTime>
+      <publishTime>11/05/2018 08:39:56</publishTime>
     </File>
     <File Include="Scripts/esm/popper-utils.min.js">
-      <publishTime>05/11/2018 08:39:56</publishTime>
+      <publishTime>11/05/2018 08:39:56</publishTime>
     </File>
     <File Include="Scripts/esm/popper-utils.min.js.map">
-      <publishTime>05/11/2018 08:39:56</publishTime>
+      <publishTime>11/05/2018 08:39:56</publishTime>
     </File>
     <File Include="Scripts/esm/popper.js">
-      <publishTime>05/11/2018 08:39:56</publishTime>
+      <publishTime>11/05/2018 08:39:56</publishTime>
     </File>
     <File Include="Scripts/esm/popper.js.map">
-      <publishTime>05/11/2018 08:39:56</publishTime>
+      <publishTime>11/05/2018 08:39:56</publishTime>
     </File>
     <File Include="Scripts/esm/popper.min.js">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/esm/popper.min.js.map">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.js">
       <publishTime>10/29/2018 20:06:05</publishTime>
@@ -395,121 +395,124 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>10/29/2018 20:06:22</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.js">
-      <publishTime>05/11/2018 08:39:01</publishTime>
+      <publishTime>11/05/2018 08:39:01</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
-      <publishTime>05/11/2018 08:39:01</publishTime>
+      <publishTime>11/05/2018 08:39:01</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.8.3.js">
       <publishTime>10/29/2018 20:06:19</publishTime>
     </File>
     <File Include="Scripts/popper-utils.js">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/popper-utils.js.map">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/popper-utils.min.js">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/popper-utils.min.js.map">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/popper.js">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/popper.js.map">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/popper.min.js">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/popper.min.js.map">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/README.md">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/umd/popper-utils.js">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/umd/popper-utils.js.map">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/umd/popper-utils.min.js">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/umd/popper-utils.min.js.map">
-      <publishTime>05/11/2018 08:39:55</publishTime>
+      <publishTime>11/05/2018 08:39:55</publishTime>
     </File>
     <File Include="Scripts/umd/popper.js">
-      <publishTime>05/11/2018 08:39:54</publishTime>
+      <publishTime>11/05/2018 08:39:54</publishTime>
     </File>
     <File Include="Scripts/umd/popper.js.map">
-      <publishTime>05/11/2018 08:39:54</publishTime>
+      <publishTime>11/05/2018 08:39:54</publishTime>
     </File>
     <File Include="Scripts/umd/popper.min.js">
-      <publishTime>05/11/2018 08:39:54</publishTime>
+      <publishTime>11/05/2018 08:39:54</publishTime>
     </File>
     <File Include="Scripts/umd/popper.min.js.map">
-      <publishTime>05/11/2018 08:39:54</publishTime>
+      <publishTime>11/05/2018 08:39:54</publishTime>
     </File>
     <File Include="Site/CadastroCidade.aspx">
-      <publishTime>11/08/2018 11:47:54</publishTime>
+      <publishTime>08/11/2018 11:47:54</publishTime>
     </File>
     <File Include="Site/CadastroCliente.aspx">
-      <publishTime>11/08/2018 11:37:22</publishTime>
+      <publishTime>08/11/2018 11:37:22</publishTime>
     </File>
     <File Include="Site/CadastroEstado.aspx">
-      <publishTime>11/08/2018 11:00:59</publishTime>
+      <publishTime>08/11/2018 11:00:59</publishTime>
+    </File>
+    <File Include="Site/CadastroProduto.aspx">
+      <publishTime>11/09/2018 17:03:51</publishTime>
     </File>
     <File Include="Site/Index.aspx">
-      <publishTime>11/08/2018 11:55:28</publishTime>
+      <publishTime>11/08/2018 22:26:13</publishTime>
     </File>
     <File Include="Site/Login/css/my-login.css">
-      <publishTime>08/11/2018 14:13:56</publishTime>
+      <publishTime>11/08/2018 14:13:56</publishTime>
     </File>
     <File Include="Site/Login/forgot.aspx">
-      <publishTime>08/11/2018 17:30:41</publishTime>
+      <publishTime>11/08/2018 21:21:19</publishTime>
     </File>
     <File Include="Site/Login/img/logo.jpg">
-      <publishTime>08/11/2018 14:13:56</publishTime>
+      <publishTime>11/08/2018 14:13:56</publishTime>
     </File>
     <File Include="Site/Login/js/jquery.min.js">
-      <publishTime>08/11/2018 14:13:56</publishTime>
+      <publishTime>11/08/2018 14:13:56</publishTime>
     </File>
     <File Include="Site/Login/js/my-login.js">
-      <publishTime>08/11/2018 14:13:56</publishTime>
+      <publishTime>11/08/2018 14:13:56</publishTime>
     </File>
     <File Include="Site/Login/LICENSE">
-      <publishTime>08/11/2018 14:13:56</publishTime>
+      <publishTime>11/08/2018 14:13:56</publishTime>
     </File>
     <File Include="Site/Login/login.aspx">
-      <publishTime>08/11/2018 16:00:11</publishTime>
+      <publishTime>11/08/2018 16:00:11</publishTime>
     </File>
     <File Include="Site/Login/README.md">
-      <publishTime>08/11/2018 14:13:56</publishTime>
+      <publishTime>11/08/2018 14:13:56</publishTime>
     </File>
     <File Include="Site/Login/register.aspx">
-      <publishTime>08/11/2018 15:52:28</publishTime>
+      <publishTime>11/08/2018 22:02:40</publishTime>
     </File>
     <File Include="Site/Login/reset.aspx">
-      <publishTime>08/11/2018 16:10:12</publishTime>
+      <publishTime>11/08/2018 16:10:12</publishTime>
     </File>
     <File Include="Site/Style.css">
-      <publishTime>05/11/2018 20:05:15</publishTime>
+      <publishTime>11/05/2018 20:05:15</publishTime>
     </File>
     <File Include="Site/Style1.css">
-      <publishTime>05/11/2018 19:59:38</publishTime>
+      <publishTime>11/05/2018 19:59:38</publishTime>
     </File>
     <File Include="Site/Style2.css">
-      <publishTime>05/11/2018 20:01:12</publishTime>
+      <publishTime>11/05/2018 20:01:12</publishTime>
     </File>
     <File Include="Site/Style3.css">
-      <publishTime>11/06/2018 20:52:17</publishTime>
+      <publishTime>06/11/2018 20:52:17</publishTime>
     </File>
     <File Include="Site/Style4.css">
-      <publishTime>11/08/2018 11:55:58</publishTime>
+      <publishTime>08/11/2018 11:55:58</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>10/29/2018 20:05:47</publishTime>
@@ -533,7 +536,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>10/29/2018 20:05:47</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/11/2018 15:13:51</publishTime>
+      <publishTime>11/06/2018 15:13:51</publishTime>
     </File>
   </ItemGroup>
 </Project>

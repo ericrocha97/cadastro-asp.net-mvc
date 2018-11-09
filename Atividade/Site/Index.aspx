@@ -37,6 +37,9 @@
                         <div class="d-flex justify-content-center">
                             <asp:Button ID="CadCidade" runat="server" Text="Cadastro de Cidades" OnClick="CadCidade_Click" class="btn btn-primary rounded" />
                         </div>
+                        <div class="d-flex justify-content-center">
+                            <asp:Button ID="CadProduto" runat="server" Text="Cadastro de Produtos" OnClick="CadProduto_Click" class="btn btn-primary rounded" />
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm" data-toggle="collapse">

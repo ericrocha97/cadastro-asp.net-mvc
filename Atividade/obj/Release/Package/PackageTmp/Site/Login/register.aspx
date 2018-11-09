@@ -48,7 +48,7 @@
                                     <label>
                                       <!--  <input type="checkbox" name="aggree" value="1"> -->
                                         <asp:CheckBox ID="aggree" runat="server" name="aggree" value="1" required />
-                                        Eu concordo com os Termos e Condições
+                                        Eu concordo com os <a href="#">Termos e Condições</a>
                                     </label>
                                 </div>
 

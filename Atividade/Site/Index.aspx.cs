@@ -30,5 +30,10 @@ namespace Atividade
         {
             Response.Redirect("~/Site/CadastroCidade.aspx");
         }
+
+        protected void CadProduto_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Site/CadastroProduto.aspx");
+        }
     }
 }

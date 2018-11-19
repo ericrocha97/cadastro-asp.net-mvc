@@ -56,8 +56,8 @@ namespace Atividade.Site
                 cnx.Open();
                 MySqlCommand comm = cnx.CreateCommand();
                 comm.CommandText = "INSERT INTO produtos(`descricao`,`UN`,`preco`) VALUES(@descricao, @UN, @preco)";
-                comm.Parameters.AddWithValue("@descricao", TextBoxDesc.Text);
-                comm.Parameters.AddWithValue("@UN", TextBoxUN.Text);
+                comm.Parameters.AddWithValue("@descricao", TextBoxDesc.Text.ToUpper());
+                comm.Parameters.AddWithValue("@UN", TextBoxUN.Text.ToUpper());
                
                  string valor = TextBoxPreco.Text;
                 
@@ -140,7 +140,7 @@ namespace Atividade.Site
             cnx.Open();
             // cria o comando
             MySqlCommand cmd = new MySqlCommand(sql, cnx);
-            cmd.Parameters.AddWithValue("@descricao", TextBoxPesquisa.Text);
+            cmd.Parameters.AddWithValue("@descricao", TextBoxPesquisa.Text + "%");
             // cria a tabela de dados
             DataTable data = new DataTable();
             //carrega a tabela com os dados

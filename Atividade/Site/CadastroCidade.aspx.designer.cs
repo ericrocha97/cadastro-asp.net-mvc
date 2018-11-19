@@ -40,6 +40,15 @@ namespace Atividade.Views {
         protected global::System.Web.UI.WebControls.TextBox TextBoxEstado;
         
         /// <summary>
+        /// Controle ddUF.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddUF;
+        
+        /// <summary>
         /// Controle TextBoxUF.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace Atividade.Views {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxUF;
+        
+        /// <summary>
+        /// Controle TextBoxxx.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxxx;
         
         /// <summary>
         /// Controle Gravar.

@@ -56,7 +56,7 @@
             <div class="row" style="width: 100%;">
                <!-- <div class="col-sm" data-toggle="collapse">
                 </div> -->
-                <div class="col-4 d-flex justify-content-center col-sm-4 col-md-12 col-lg-12 col-xl-12" style="margin-left: 20px; margin-right: 20px;">
+                <div class="col-12 d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-left: 20px; margin-right: 20px;">
                     <asp:Button UseSubmitBehavior="false" ID="Gravar" runat="server" Text="Gravar" OnClick="ButtonGravar" class="btn btn-success" />
                     <button id="btexcluir" type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Excluir</button>
                     <!-- inicio modal -->
@@ -129,7 +129,7 @@
             <div class="row" style="width: 100%;">
               <!--  <div class="col-sm" data-toggle="collapse">
                 </div> -->
-                <div class="col-4 d-flex justify-content-center col-sm-4 col-md-12 col-lg-12 col-xl-12" data-toggle="collapse">
+                <div class="col-12 d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12" data-toggle="collapse">
                     <div class="ESPACO">
                     </div>
                     <div style="margin-left: 20px;">

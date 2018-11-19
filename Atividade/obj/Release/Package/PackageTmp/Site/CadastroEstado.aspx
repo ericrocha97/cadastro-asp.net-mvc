@@ -16,11 +16,9 @@
     <div class="ESPACO">
     </div>
     <form id="form1" runat="server">
-        <div class="row" style="width: 100%;">
+        <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-sm" data-toggle="collapse">
-                </div>
-                <div class="col-sm">
+                <div class="col-12" style="margin-left: 20px; margin-right: 20px;">
                     <div class="h2">
                         <h2 class="text-uppercase text-center" style="color: #fff; text-shadow: 2px 2px 5px #272727;">Cadastro de Estados</h2>
                     </div>
@@ -29,23 +27,22 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1">Nome Estado</span>
                             </div>
-                            <asp:TextBox ID="TextBoxNome" runat="server" type="text" class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxNome" runat="server" type="text" class="form-control" placeholder="ex.: Paraná" autofocus ToolTip="Preencha este campo com o nome do estado."></asp:TextBox>
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon2">UF</span>
                             </div>
-                            <asp:TextBox ID="TextBoxUF" runat="server" type="text" class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxUF" runat="server" type="text" class="form-control" placeholder="ex.: PR" ToolTip="Preencha este campo com a UF do estado."></asp:TextBox>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm" data-toggle="collapse">
-                </div>
             </div>
+        </div>
+
+        <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-sm" data-toggle="collapse">
-                </div>
-                <div class="col-sm">
+                <div class="col-12 d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-left: 20px; margin-right: 20px;">
                     <asp:Button UseSubmitBehavior="false" ID="Gravar" runat="server" Text="Gravar" OnClick="ButtonGravar" class="btn btn-success" />
                     <button id="btexcluir" type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Excluir</button>
                     <!-- Modal  -->
@@ -66,7 +63,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">Código do Estado</span>
                                             </div>
-                                            <asp:TextBox ID="TextBoxIdEx" runat="server" class="form-control" required="required"></asp:TextBox>
+                                            <asp:TextBox ID="TextBoxIdEx" runat="server" class="form-control" required="required" placeholder="ex.: 1" autocomplete="off" ToolTip="Preencha este campo com o código do estado."></asp:TextBox>
                                             <br />
                                         </div>
                                     </div>
@@ -84,48 +81,45 @@
                     <!-- Fim Modal  -->
                     <asp:Button UseSubmitBehavior="false" ID="Voltar" runat="server" Text="Voltar" OnClick="ButtonVoltar" class="btn btn-primary" />
                 </div>
-                <div class="col-sm" data-toggle="collapse">
-                </div>
             </div>
+        </div>
+
+        <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-sm" data-toggle="collapse">
-                </div>
-                <div class="col-sm">
+                <div class="col-12" style="margin-left: 20px; margin-right: 20px;">
                     <div class="ESPACO">
                     </div>
                     <div class="form-group">
                         <div class="input-group mb-3">
-                            <asp:TextBox ID="TextBoxPesquisa" runat="server" type="text" class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxPesquisa" runat="server" type="text" class="form-control" placeholder="Busque o estado pelo nome" autocomplete="off" ToolTip="Digite o nome do estado e clique em Pesquisar."></asp:TextBox>
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon3"><i class="fas fa-search"></i></span>
                             </div>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                    <asp:Button UseSubmitBehavior="false" ID="ButtonPesquisa" runat="server" Text="Pesquisar" OnClick="ButtonPesquisar" class="btn btn-primary" />
+                        <asp:Button UseSubmitBehavior="false" ID="ButtonPesquisa" runat="server" Text="Pesquisar" OnClick="ButtonPesquisar" class="btn btn-primary" />
                     </div>
                     <br />
                 </div>
-                <div class="col-sm" data-toggle="collapse">
-                </div>
             </div>
+        </div>
+
+        <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-sm" data-toggle="collapse">
-                </div>
-                <div class="col-sm">
+                <div class="col-12 d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12" data-toggle="collapse">
                     <div class="ESPACO">
                     </div>
                     <div style="margin-left: 20px;">
                         <asp:GridView ID="GridEstado" runat="server" AutoGenerateColumns="false" class="table table-striped table-dark">
+                           
                             <Columns>
-                                <asp:BoundField DataField="codigo" HeaderText="#" />
+                                <asp:BoundField DataField="codigo" HeaderText="#"/> 
                                 <asp:BoundField DataField="nome" HeaderText="Nome Estado" />
                                 <asp:BoundField DataField="UF" HeaderText="UF" />
                             </Columns>
                         </asp:GridView>
                     </div>
-                </div>
-                <div class="col-sm" data-toggle="collapse">
                 </div>
             </div>
         </div>

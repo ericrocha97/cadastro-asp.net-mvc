@@ -16,6 +16,7 @@ namespace Atividade.Views
         protected void Page_Load(object sender, EventArgs e)
         {
             PreencherGridMySQL();
+            DropUF();
         }
 
         public void PreencherGridMySQL()
@@ -58,10 +59,10 @@ namespace Atividade.Views
 
         private void PreencherGrid()
         {
-            
+
             this.GridCidade.DataSource = ConsultarDados();
             this.GridCidade.DataBind();
-            
+
         }
 
         private List<Cidade> ConsultarDados()
@@ -86,9 +87,9 @@ namespace Atividade.Views
             cnx.Open();
             MySqlCommand comm = cnx.CreateCommand();
             comm.CommandText = "INSERT INTO cidades(`nome`,`estado`,`UF`) VALUES(@nome, @estado, @UF)";
-            comm.Parameters.AddWithValue("@nome", TextBoxNome.Text);
-            comm.Parameters.AddWithValue("@estado", TextBoxEstado.Text);
-            comm.Parameters.AddWithValue("@UF", TextBoxUF.Text);
+            comm.Parameters.AddWithValue("@nome", TextBoxNome.Text.ToUpper());
+            comm.Parameters.AddWithValue("@estado", ddUF.SelectedItem);
+            comm.Parameters.AddWithValue("@UF", TextBoxUF.Text.ToUpper());
             comm.ExecuteNonQuery();
             cnx.Close();
         }
@@ -154,6 +155,50 @@ namespace Atividade.Views
             // carega a grid com a tabela
             GridCidade.DataSource = data;
             GridCidade.DataBind();
+        }
+
+        public void DropUF()
+        {
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
+            MySqlConnection sqlCon = new MySqlConnection(connectionString); //estancia a conexao
+            sqlCon.Open();
+            string sql = "SELECT `codigo` , `nome` FROM `estado`";
+            using (MySqlCommand cmd = new MySqlCommand(sql, sqlCon))
+            {
+                cmd.CommandType = CommandType.Text;
+                MySqlDataReader dr = cmd.ExecuteReader();
+                {
+                    /*DropDownList2.Items.Add(dr["nome_estado"].ToString());
+                    DropDownList2.Items[cont].Value = dr["i_estados"].ToString();*/
+
+                    ddUF.DataTextField = "nome";//Aqui inclua o nome do campo no Banco referente ao Nome a ser apresentado no DropDown  																
+                    ddUF.DataValueField = "codigo";//Aqui inclua o nome do campo no Banco referente ao ID
+                    ddUF.DataSource = dr; //Recebe o comando do select para popular o bagulho. 
+                    ddUF.DataBind();  //vincula os dados					
+                }
+            }
+            sqlCon.Close();
+        }
+
+        protected void ddlUF_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
+            MySqlConnection sqlCon = new MySqlConnection(connectionString); //estancia a conexao
+            sqlCon.Open();
+            string sql = "SELECT `UF` FROM `estado` WHERE `nome` like @estado";
+            using (MySqlCommand cmd = new MySqlCommand(sql, sqlCon))
+            {
+                cmd.Parameters.AddWithValue("@estado", ddUF.SelectedItem + "%");
+                cmd.CommandType = CommandType.Text;
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    TextBoxUF.Text = dr["UF"].ToString();
+                }
+            }
+            sqlCon.Close();
         }
     }
 }

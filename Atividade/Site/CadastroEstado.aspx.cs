@@ -84,8 +84,8 @@ namespace Atividade.Views
             cnx.Open();
             MySqlCommand comm = cnx.CreateCommand();
             comm.CommandText = "INSERT INTO estado(`nome`,`UF`) VALUES(@nome, @UF)"; 
-            comm.Parameters.AddWithValue("@nome", TextBoxNome.Text);
-            comm.Parameters.AddWithValue("@UF", TextBoxUF.Text);
+            comm.Parameters.AddWithValue("@nome", TextBoxNome.Text.ToUpper());
+            comm.Parameters.AddWithValue("@UF", TextBoxUF.Text.ToUpper());
             comm.ExecuteNonQuery();
             cnx.Close();
         }
@@ -148,7 +148,7 @@ namespace Atividade.Views
             cnx.Open();
             // cria o comando
             MySqlCommand cmd = new MySqlCommand(sql, cnx);
-            cmd.Parameters.AddWithValue("@nome", TextBoxPesquisa.Text);
+            cmd.Parameters.AddWithValue("@nome", TextBoxPesquisa.Text + "%");
             // cria a tabela de dados
             DataTable data = new DataTable();
             //carrega a tabela com os dados

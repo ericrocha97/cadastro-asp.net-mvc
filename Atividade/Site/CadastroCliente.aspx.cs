@@ -16,6 +16,7 @@ namespace Atividade.Views
         protected void Page_Load(object sender, EventArgs e)
         {
             PreencherGridMySQL();
+            DropUF();
         }
 
         public void PreencherGridMySQL()
@@ -70,7 +71,7 @@ namespace Atividade.Views
                 //Id = int.Parse(TextBoxID.Text),
                 Nome = TextBoxNome.Text,
                 Endereco = TextBoxEndereco.Text,
-                Cidade = TextBoxCidade.Text
+                // Cidade = TextBoxCidade.Text
             };
             ListaClientes.Add(cadastro);
 
@@ -84,9 +85,9 @@ namespace Atividade.Views
             cnx.Open();
             MySqlCommand comm = cnx.CreateCommand();
             comm.CommandText = "INSERT INTO clientes(`nome`,`endereco`,`cidade`) VALUES(@nome, @endereco, @cidade)";
-            comm.Parameters.AddWithValue("@nome", TextBoxNome.Text);
-            comm.Parameters.AddWithValue("@endereco", TextBoxEndereco.Text);
-            comm.Parameters.AddWithValue("@cidade", TextBoxCidade.Text);
+            comm.Parameters.AddWithValue("@nome", TextBoxNome.Text.ToUpper());
+            comm.Parameters.AddWithValue("@endereco", TextBoxEndereco.Text.ToUpper());
+            comm.Parameters.AddWithValue("@cidade", ddlCidade.SelectedItem);
             comm.ExecuteNonQuery();
             cnx.Close();
         }
@@ -104,13 +105,13 @@ namespace Atividade.Views
             TextBoxIdEx.Text = "";
             TextBoxNome.Text = "";
             TextBoxEndereco.Text = "";
-            TextBoxCidade.Text = "";
+            // TextBoxCidade.Text = "";
 
         }
 
         protected void ButtonExcluir(object sender, EventArgs e)
         {
-            
+
             ExcluirBanco();
             PreencherGridMySQL();
             Limpacampos();
@@ -143,7 +144,7 @@ namespace Atividade.Views
             cnx.Open();
             // cria o comando
             MySqlCommand cmd = new MySqlCommand(sql, cnx);
-            cmd.Parameters.AddWithValue("@nome", TextBoxPesquisa.Text);
+            cmd.Parameters.AddWithValue("@nome", TextBoxPesquisa.Text + "%");
             // cria a tabela de dados
             DataTable data = new DataTable();
             //carrega a tabela com os dados
@@ -154,5 +155,54 @@ namespace Atividade.Views
             GridCliente.DataSource = data;
             GridCliente.DataBind();
         }
+
+        public void DropUF()
+        {
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
+            MySqlConnection sqlCon = new MySqlConnection(connectionString); //estancia a conexao
+            sqlCon.Open();
+            string sql = "SELECT `codigo` , `nome` FROM `estado`";
+            using (MySqlCommand cmd = new MySqlCommand(sql, sqlCon))
+            {
+                cmd.CommandType = CommandType.Text;
+                MySqlDataReader dr = cmd.ExecuteReader();
+                {
+                    /*DropDownList2.Items.Add(dr["nome_estado"].ToString());
+                    DropDownList2.Items[cont].Value = dr["i_estados"].ToString();*/
+
+                    ddUF.DataTextField = "nome";//Aqui inclua o nome do campo no Banco referente ao Nome a ser apresentado no DropDown  																
+                    ddUF.DataValueField = "codigo";//Aqui inclua o nome do campo no Banco referente ao ID
+                    ddUF.DataSource = dr; //Recebe o comando do select para popular o bagulho. 
+                    ddUF.DataBind();  //vincula os dados					
+                }
+            }
+            sqlCon.Close();
+        }
+
+        protected void ddlUF_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ddlCidade.ClearSelection();
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
+            MySqlConnection sqlCon = new MySqlConnection(connectionString); //estancia a conexao
+            sqlCon.Open();
+            string sql = "SELECT `codigo` , `nome` FROM `cidades` where `estado` like @estado";
+            using (MySqlCommand cmd = new MySqlCommand(sql, sqlCon))
+            {
+                cmd.Parameters.AddWithValue("@estado", ddUF.SelectedItem + "%");
+                cmd.CommandType = CommandType.Text;
+                MySqlDataReader dr = cmd.ExecuteReader();
+                {
+                    ddlCidade.DataTextField = "nome";//Aqui inclua o nome do campo no Banco referente ao Nome a ser apresentado no DropDown  																
+                    ddlCidade.DataValueField = "codigo";//Aqui inclua o nome do campo no Banco referente ao ID
+                    ddlCidade.DataSource = dr; //Recebe o comando do select para popular o bagulho. 
+                    ddlCidade.DataBind();  //vincula os dados
+
+                }
+            }
+            sqlCon.Close();
+        }
+
     }
+
+
 }

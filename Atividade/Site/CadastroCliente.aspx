@@ -16,11 +16,9 @@
     <div class="ESPACO">
     </div>
     <form id="form1" runat="server">
-        <div class="row" style="width: 100%;">
+        <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-sm" data-toggle="collapse">
-                </div>
-                <div class="col-sm">
+                <div class="col-12" style="margin-left: 20px; margin-right: 20px;">
                     <div class="h2">
                         <h2 class="text-uppercase text-center" style="color: #fff; text-shadow: 2px 2px 5px #272727;">Cadastro de Clientes</h2>
                     </div>
@@ -29,30 +27,38 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Nome Cliente</span>
                             </div>
-                            <asp:TextBox ID="TextBoxNome" runat="server" class="form-control" required="required"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxNome" runat="server" class="form-control" required="required" placeholder="ex.: José" autofocus ToolTip="Preencha este campo com o nome do cliente."></asp:TextBox>
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Endereço</span>
                             </div>
-                            <asp:TextBox ID="TextBoxEndereco" runat="server" class="form-control" required="required"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxEndereco" runat="server" class="form-control" required="required" placeholder="ex.: Avenida Brasil, Nº 1547" ToolTip="Preencha este campo com o endereço completo."></asp:TextBox>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Estado</span>
+                            </div>
+                            <asp:DropDownList ID="ddUF" runat="server" AutoPostBack="true" Enabled="True" class="form-control" OnSelectedIndexChanged="ddlUF_SelectedIndexChanged" AppendDataBoundItems = "True">
+                                <asp:ListItem Value="0">Selecione o estado</asp:ListItem>
+                            </asp:DropDownList>
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Cidade</span>
                             </div>
-                            <asp:TextBox ID="TextBoxCidade" runat="server" class="form-control" required="required"></asp:TextBox>
+                            <asp:DropDownList ID="ddlCidade" runat="server"  class="form-control">
+                                <asp:ListItem>Selecione a cidade</asp:ListItem>
+                            </asp:DropDownList>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm" data-toggle="collapse">
-                </div>
             </div>
+        </div>
 
+        <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-sm" data-toggle="collapse">
-                </div>
-                <div class="col-sm">
+                <div class="col-12 d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-left: 20px; margin-right: 20px;">
                     <asp:Button UseSubmitBehavior="false" ID="Gravar" runat="server" Text="Gravar" OnClick="ButtonGravar" class="btn btn-success" />
                     <button id="btexcluir" type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Excluir</button>
                     <!-- inicio modal -->
@@ -73,7 +79,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">Código do Cliente</span>
                                             </div>
-                                            <asp:TextBox ID="TextBoxIdEx" runat="server" class="form-control" required="required"></asp:TextBox>
+                                            <asp:TextBox ID="TextBoxIdEx" runat="server" class="form-control" required="required" placeholder="ex.: 1" autocomplete="off" ToolTip="Preencha este campo com o código do cliente."></asp:TextBox>
                                             <br />
                                         </div>
                                     </div>
@@ -91,19 +97,17 @@
                     <!-- fim modal -->
                     <asp:Button UseSubmitBehavior="false" ID="Voltar" runat="server" Text="Voltar" OnClick="ButtonVoltar" class="btn btn-primary" />
                 </div>
-                <div class="col-sm" data-toggle="collapse">
-                </div>
             </div>
+        </div>
 
+        <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-sm" data-toggle="collapse">
-                </div>
-                <div class="col-sm">
+                <div class="col-12" style="margin-left: 20px; margin-right: 20px;">
                     <div class="ESPACO">
                     </div>
                     <div class="form-group">
                         <div class="input-group mb-3">
-                            <asp:TextBox ID="TextBoxPesquisa" runat="server" type="text" class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxPesquisa" runat="server" type="text" class="form-control" placeholder="Busque o cliente pelo nome" autocomplete="off" ToolTip="Digite o nome do cliente e clique em Pesquisar."></asp:TextBox>
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon3"><i class="fas fa-search"></i></span>
                             </div>
@@ -114,14 +118,12 @@
                     </div>
                     <br />
                 </div>
-                <div class="col-sm" data-toggle="collapse">
-                </div>
             </div>
+        </div>
 
+        <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-sm" data-toggle="collapse">
-                </div>
-                <div class="col-sm">
+                <div class="col-12 d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12" data-toggle="collapse">
                     <div class="ESPACO">
                     </div>
                     <div style="margin-left: 20px;">
@@ -134,8 +136,6 @@
                             </Columns>
                         </asp:GridView>
                     </div>
-                </div>
-                <div class="col-sm" data-toggle="collapse">
                 </div>
             </div>
         </div>

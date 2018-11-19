@@ -40,13 +40,22 @@ namespace Atividade.Views {
         protected global::System.Web.UI.WebControls.TextBox TextBoxEndereco;
         
         /// <summary>
-        /// Controle TextBoxCidade.
+        /// Controle ddUF.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxCidade;
+        protected global::System.Web.UI.WebControls.DropDownList ddUF;
+        
+        /// <summary>
+        /// Controle ddlCidade.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCidade;
         
         /// <summary>
         /// Controle Gravar.

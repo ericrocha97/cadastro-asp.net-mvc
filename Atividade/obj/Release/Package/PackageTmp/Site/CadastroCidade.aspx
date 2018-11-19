@@ -16,11 +16,9 @@
     <div class="ESPACO">
     </div>
     <form id="form1" runat="server">
-        <div class="row" style="width: 100%;">
+        <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-sm" data-toggle="collapse">
-                </div>
-                <div class="col-sm">
+                <div class="col-12" style="margin-left: 20px; margin-right: 20px;">
                     <div class="h2">
                         <h2 class="text-uppercase text-center" style="color: #fff; text-shadow: 2px 2px 5px #272727;">Cadastro de Cidades</h2>
                     </div>
@@ -29,33 +27,51 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Nome Cidade</span>
                             </div>
-                            <asp:TextBox ID="TextBoxNome" runat="server" class="form-control" required="required"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxNome" runat="server" class="form-control" required="required" placeholder="ex.: Cascavel" autofocus ToolTip="Preencha este campo com o nome da cidade."></asp:TextBox>
                             <br />
                         </div>
+                        <!--
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Estado</span>
                             </div>
-                            <asp:TextBox ID="TextBoxEstado" runat="server" class="form-control" required="required"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxEstado" runat="server" class="form-control" required="required" placeholder="ex.: Paraná" ToolTip="Preencha este campo com o nome do estado."></asp:TextBox>
                             <br />
                         </div>
+                        -->
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Estado</span>
+                            </div>
+                            <asp:DropDownList ID="ddUF" runat="server" AutoPostBack="true" Enabled="True" class="form-control" OnSelectedIndexChanged="ddlUF_SelectedIndexChanged" AppendDataBoundItems = "True">
+                                <asp:ListItem Value="0">Selecione o estado</asp:ListItem>
+                            </asp:DropDownList>
+                            <div></div>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">UF</span>
+                            </div>
+                            <asp:TextBox ID="TextBoxUF" runat="server" class="form-control disabled" placeholder="ex.: PR" ToolTip="Preencha com a UF do estado."></asp:TextBox>
+                        </div>
+
+                        <!--
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">UF</span>
                             </div>
-                            <asp:TextBox ID="TextBoxUF" runat="server" class="form-control" required="required"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxxx" runat="server" class="form-control" placeholder="ex.: PR" ToolTip="Preencha com a UF do estado."></asp:TextBox>
                             <br />
                         </div>
+                        -->
                     </div>
                 </div>
-                <div class="col-sm" data-toggle="collapse">
-                </div>
             </div>
+        </div>
 
+
+
+        <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-sm" data-toggle="collapse">
-                </div>
-                <div class="col-sm">
+                <div class="col-12 d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-left: 20px; margin-right: 20px;">
                     <asp:Button UseSubmitBehavior="false" ID="Gravar" runat="server" Text="Gravar" OnClick="ButtonGravar" class="btn btn-success" />
                     <button id="btexcluir" type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Excluir</button>
                     <!-- Modal  -->
@@ -76,7 +92,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">Código da Cidade</span>
                                             </div>
-                                            <asp:TextBox ID="TextBoxIdEx" runat="server" class="form-control" required="required"></asp:TextBox>
+                                            <asp:TextBox ID="TextBoxIdEx" runat="server" class="form-control" required="required" placeholder="ex.: 1" autocomplete="off" ToolTip="Preencha este campo com o código da cidade."></asp:TextBox>
                                             <br />
                                         </div>
                                     </div>
@@ -94,19 +110,17 @@
                     <!-- Fim Modal  -->
                     <asp:Button UseSubmitBehavior="false" ID="Voltar" runat="server" Text="Voltar" OnClick="ButtonVoltar" class="btn btn-primary" />
                 </div>
-                <div class="col-sm" data-toggle="collapse">
-                </div>
             </div>
+        </div>
 
+        <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-sm" data-toggle="collapse">
-                </div>
-                <div class="col-sm">
+                <div class="col-12" style="margin-left: 20px; margin-right: 20px;">
                     <div class="ESPACO">
                     </div>
                     <div class="form-group">
                         <div class="input-group mb-3">
-                            <asp:TextBox ID="TextBoxPesquisa" runat="server" type="text" class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxPesquisa" runat="server" type="text" class="form-control" placeholder="Busque a cidade pelo nome" autocomplete="off" ToolTip="Digite o nome da cidade e clique em Pesquisar."></asp:TextBox>
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon3"><i class="fas fa-search"></i></span>
                             </div>
@@ -117,14 +131,12 @@
                     </div>
                     <br />
                 </div>
-                <div class="col-sm" data-toggle="collapse">
-                </div>
             </div>
+        </div>
 
+        <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-sm" data-toggle="collapse">
-                </div>
-                <div class="col-sm">
+                <div class="col-12 d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12" data-toggle="collapse">
                     <div class="ESPACO">
                     </div>
                     <div style="margin-left: 20px;">
@@ -137,8 +149,6 @@
                             </Columns>
                         </asp:GridView>
                     </div>
-                </div>
-                <div class="col-sm" data-toggle="collapse">
                 </div>
             </div>
         </div>

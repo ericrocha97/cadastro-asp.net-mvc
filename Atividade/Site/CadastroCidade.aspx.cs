@@ -140,12 +140,12 @@ namespace Atividade.Views
             string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
             MySqlConnection cnx = new MySqlConnection(connectionString); //instancia  conexão.
             // sql consulta
-            string sql = "SELECT * FROM `cidades` WHERE `nome` LIKE @nome";
+            string sql = "SELECT * FROM `cidades` WHERE `nome` LIKE @nome or `codigo` LIKE @nome or `estado` LIKE @nome or `UF` LIKE @nome";
             // abre a conexao
             cnx.Open();
             // cria o comando
             MySqlCommand cmd = new MySqlCommand(sql, cnx);
-            cmd.Parameters.AddWithValue("@nome", TextBoxPesquisa.Text);
+            cmd.Parameters.AddWithValue("@nome","%" + TextBoxPesquisa.Text + "%");
             // cria a tabela de dados
             DataTable data = new DataTable();
             //carrega a tabela com os dados
@@ -186,10 +186,11 @@ namespace Atividade.Views
             string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
             MySqlConnection sqlCon = new MySqlConnection(connectionString); //estancia a conexao
             sqlCon.Open();
-            string sql = "SELECT `UF` FROM `estado` WHERE `nome` like @estado";
+            string sql = "SELECT `UF` FROM `estado` WHERE `nome` like @estado and `codigo` = @codigo";
             using (MySqlCommand cmd = new MySqlCommand(sql, sqlCon))
             {
                 cmd.Parameters.AddWithValue("@estado", ddUF.SelectedItem + "%");
+                cmd.Parameters.AddWithValue("@codigo", ddUF.SelectedValue);
                 cmd.CommandType = CommandType.Text;
                 MySqlDataReader dr = cmd.ExecuteReader();
 

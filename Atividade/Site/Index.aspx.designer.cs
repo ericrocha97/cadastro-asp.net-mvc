@@ -22,15 +22,6 @@ namespace Atividade {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Controle CadCliente.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CadCliente;
-        
-        /// <summary>
         /// Controle CadEstado.
         /// </summary>
         /// <remarks>
@@ -47,6 +38,15 @@ namespace Atividade {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CadCidade;
+        
+        /// <summary>
+        /// Controle CadCliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CadCliente;
         
         /// <summary>
         /// Controle CadProduto.

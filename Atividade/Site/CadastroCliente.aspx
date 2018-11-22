@@ -27,7 +27,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Nome Cliente</span>
                             </div>
-                            <asp:TextBox ID="TextBoxNome" runat="server" class="form-control" required="required" placeholder="ex.: José" autofocus ToolTip="Preencha este campo com o nome do cliente."></asp:TextBox>
+                            <asp:TextBox ID="TextBoxNome" runat="server" class="form-control" required="required" placeholder="ex.: José" autofocus ToolTip="Preencha este campo com o nome do cliente."></asp:TextBox>            
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
@@ -39,7 +39,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Estado</span>
                             </div>
-                            <asp:DropDownList ID="ddUF" runat="server" AutoPostBack="true" Enabled="True" class="form-control" OnSelectedIndexChanged="ddlUF_SelectedIndexChanged" AppendDataBoundItems = "True">
+                            <asp:DropDownList ID="ddUF" runat="server" AutoPostBack="true"  Enabled="True" required="required" class="form-control" OnSelectedIndexChanged="ddlUF_SelectedIndexChanged" AppendDataBoundItems = "True">
                                 <asp:ListItem Value="0">Selecione o estado</asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -47,8 +47,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Cidade</span>
                             </div>
-                            <asp:DropDownList ID="ddlCidade" runat="server"  class="form-control">
-                                <asp:ListItem>Selecione a cidade</asp:ListItem>
+                            <asp:DropDownList ID="ddlCidade" runat="server"  required="required" class="form-control">
+                                <asp:ListItem Value="0">Selecione a cidade</asp:ListItem>
                             </asp:DropDownList>
                         </div>
                     </div>
@@ -107,7 +107,8 @@
                     </div>
                     <div class="form-group">
                         <div class="input-group mb-3">
-                            <asp:TextBox ID="TextBoxPesquisa" runat="server" type="text" class="form-control" placeholder="Busque o cliente pelo nome" autocomplete="off" ToolTip="Digite o nome do cliente e clique em Pesquisar."></asp:TextBox>
+                            <asp:TextBox ID="TextBoxPesquisa" runat="server" autopostback="true" type="text" class="form-control" placeholder="Busque o cliente" autocomplete="off" ToolTip="Comece a digitar para filtrar" OnTextChanged="ButtonPesquisar"></asp:TextBox>
+                            
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon3"><i class="fas fa-search"></i></span>
                             </div>

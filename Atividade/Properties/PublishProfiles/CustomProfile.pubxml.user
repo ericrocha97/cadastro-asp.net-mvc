@@ -23,10 +23,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>05/11/2018 08:39:15</publishTime>
     </File>
     <File Include="bin/Atividade.dll">
-      <publishTime>11/19/2018 11:35:46</publishTime>
+      <publishTime>11/22/2018 14:39:20</publishTime>
     </File>
     <File Include="bin/Atividade.pdb">
-      <publishTime>11/19/2018 11:35:46</publishTime>
+      <publishTime>11/22/2018 14:39:20</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/23/2017 13:15:18</publishTime>
@@ -455,19 +455,19 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>05/11/2018 08:39:54</publishTime>
     </File>
     <File Include="Site/CadastroCidade.aspx">
-      <publishTime>11/19/2018 11:33:38</publishTime>
+      <publishTime>11/22/2018 14:06:28</publishTime>
     </File>
     <File Include="Site/CadastroCliente.aspx">
-      <publishTime>11/19/2018 11:33:38</publishTime>
+      <publishTime>11/22/2018 14:20:14</publishTime>
     </File>
     <File Include="Site/CadastroEstado.aspx">
-      <publishTime>11/13/2018 14:17:42</publishTime>
+      <publishTime>11/22/2018 14:20:14</publishTime>
     </File>
     <File Include="Site/CadastroProduto.aspx">
-      <publishTime>11/12/2018 20:09:00</publishTime>
+      <publishTime>11/22/2018 14:20:14</publishTime>
     </File>
     <File Include="Site/Index.aspx">
-      <publishTime>11/13/2018 14:51:59</publishTime>
+      <publishTime>11/22/2018 14:39:06</publishTime>
     </File>
     <File Include="Site/Login/css/my-login.css">
       <publishTime>08/11/2018 14:13:56</publishTime>

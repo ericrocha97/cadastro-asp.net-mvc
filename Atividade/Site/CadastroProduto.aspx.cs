@@ -135,12 +135,12 @@ namespace Atividade.Site
             string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
             MySqlConnection cnx = new MySqlConnection(connectionString); //instancia  conexão.
             // sql consulta
-            string sql = "SELECT * FROM `produtos` WHERE `descricao` LIKE @descricao";
+            string sql = "SELECT * FROM `produtos` WHERE `descricao` LIKE @descricao or `codigo` LIKE @descricao or `UN` LIKE @descricao or `preco` LIKE @descricao";
             // abre a conexao
             cnx.Open();
             // cria o comando
             MySqlCommand cmd = new MySqlCommand(sql, cnx);
-            cmd.Parameters.AddWithValue("@descricao", TextBoxPesquisa.Text + "%");
+            cmd.Parameters.AddWithValue("@descricao","%" + TextBoxPesquisa.Text + "%");
             // cria a tabela de dados
             DataTable data = new DataTable();
             //carrega a tabela com os dados

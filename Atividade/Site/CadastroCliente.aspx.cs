@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using MySql.Data.MySqlClient;
+//using System.Web;
+using System.Security.Permissions;
+
 
 namespace Atividade.Views
 {
@@ -92,12 +95,47 @@ namespace Atividade.Views
             cnx.Close();
         }
 
+        
 
         protected void ButtonGravar(object sender, EventArgs e)
         {
-            GravarBanco();
-            PreencherGridMySQL();
-            Limpacampos();
+            if (TextBoxNome.Text == "") {
+                string alerta = "Campo Nome Obrigatorio";
+
+                this.ClientScript.RegisterClientScriptBlock(this.GetType(), "alerta", "<script type='text/javascript'>alert('" + alerta + "')</script>");
+            } else {
+                if(TextBoxEndereco.Text == "")
+                {
+                    string alerta = "Campo Endereço Obrigatorio";
+
+                    this.ClientScript.RegisterClientScriptBlock(this.GetType(), "alerta", "<script type='text/javascript'>alert('" + alerta + "')</script>");
+                }
+                else
+                {
+                    if(ddlCidade.SelectedItem is null)
+                    {
+                        string alerta = "Campo Cidade Obrigatorio";
+
+                        this.ClientScript.RegisterClientScriptBlock(this.GetType(), "alerta", "<script type='text/javascript'>alert('" + alerta + "')</script>");
+                    }
+                    else
+                    {
+                        if(ddlCidade.SelectedItem.Text == "Selecione a cidade")
+                        {
+                            string alerta = "Campo Cidade Obrigatorio";
+
+                            this.ClientScript.RegisterClientScriptBlock(this.GetType(), "alerta", "<script type='text/javascript'>alert('" + alerta + "')</script>");
+                        }
+                        else {
+                            GravarBanco();
+                            PreencherGridMySQL();
+                            Limpacampos();
+                            
+                        }
+                    }
+                }
+            }
+            
         }
 
         private void Limpacampos()
@@ -105,7 +143,9 @@ namespace Atividade.Views
             TextBoxIdEx.Text = "";
             TextBoxNome.Text = "";
             TextBoxEndereco.Text = "";
-            // TextBoxCidade.Text = "";
+            ddUF.ClearSelection();
+            ddlCidade.ClearSelection();
+
 
         }
 
@@ -115,6 +155,8 @@ namespace Atividade.Views
             ExcluirBanco();
             PreencherGridMySQL();
             Limpacampos();
+
+            
         }
 
         private void ExcluirBanco()
@@ -139,12 +181,12 @@ namespace Atividade.Views
             string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
             MySqlConnection cnx = new MySqlConnection(connectionString); //instancia  conexão.
             // sql consulta
-            string sql = "SELECT * FROM `clientes` WHERE `nome` LIKE @nome";
+            string sql = "SELECT * FROM `clientes` WHERE `nome` LIKE @nome or `codigo` LIKE @nome or `endereco` LIKE @nome or `cidade` LIKE @nome";
             // abre a conexao
             cnx.Open();
             // cria o comando
             MySqlCommand cmd = new MySqlCommand(sql, cnx);
-            cmd.Parameters.AddWithValue("@nome", TextBoxPesquisa.Text + "%");
+            cmd.Parameters.AddWithValue("@nome","%" + TextBoxPesquisa.Text + "%");
             // cria a tabela de dados
             DataTable data = new DataTable();
             //carrega a tabela com os dados
@@ -167,9 +209,7 @@ namespace Atividade.Views
                 cmd.CommandType = CommandType.Text;
                 MySqlDataReader dr = cmd.ExecuteReader();
                 {
-                    /*DropDownList2.Items.Add(dr["nome_estado"].ToString());
-                    DropDownList2.Items[cont].Value = dr["i_estados"].ToString();*/
-
+                    
                     ddUF.DataTextField = "nome";//Aqui inclua o nome do campo no Banco referente ao Nome a ser apresentado no DropDown  																
                     ddUF.DataValueField = "codigo";//Aqui inclua o nome do campo no Banco referente ao ID
                     ddUF.DataSource = dr; //Recebe o comando do select para popular o bagulho. 
@@ -188,7 +228,7 @@ namespace Atividade.Views
             string sql = "SELECT `codigo` , `nome` FROM `cidades` where `estado` like @estado";
             using (MySqlCommand cmd = new MySqlCommand(sql, sqlCon))
             {
-                cmd.Parameters.AddWithValue("@estado", ddUF.SelectedItem + "%");
+                cmd.Parameters.AddWithValue("@estado", ddUF.SelectedItem);
                 cmd.CommandType = CommandType.Text;
                 MySqlDataReader dr = cmd.ExecuteReader();
                 {
@@ -202,7 +242,30 @@ namespace Atividade.Views
             sqlCon.Close();
         }
 
+        public void Pesquisa(object sender, EventArgs e)
+        {
+            string connectionString = @"Server=MYSQL5018.site4now.net;Database=db_a427ba_ericroc;Uid=a427ba_ericroc;Pwd=poi098zxc123";
+            MySqlConnection cnx = new MySqlConnection(connectionString); //instancia  conexão.
+            // sql consulta
+            string sql = "SELECT * FROM `clientes` WHERE `nome` LIKE @nome";
+            // abre a conexao
+            cnx.Open();
+            // cria o comando
+            MySqlCommand cmd = new MySqlCommand(sql, cnx);
+            cmd.Parameters.AddWithValue("@nome", TextBoxPesquisa.Text + "%");
+            // cria a tabela de dados
+            DataTable data = new DataTable();
+            //carrega a tabela com os dados
+            data.Load(cmd.ExecuteReader());
+            //fecha conexao
+            cnx.Close();
+            // carega a grid com a tabela
+            GridCliente.DataSource = data;
+            GridCliente.DataBind();
+        }
+
     }
+    
 
 
 }

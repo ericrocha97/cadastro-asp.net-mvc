@@ -91,7 +91,7 @@
                     </div>
                     <div class="form-group">
                         <div class="input-group mb-3">
-                            <asp:TextBox ID="TextBoxPesquisa" runat="server" type="text" class="form-control" placeholder="Busque o estado pelo nome" autocomplete="off" ToolTip="Digite o nome do estado e clique em Pesquisar."></asp:TextBox>
+                            <asp:TextBox ID="TextBoxPesquisa" runat="server" type="text" class="form-control" placeholder="Busque o estado" autocomplete="off" ToolTip="Comece a digitar para filtrar" OnTextChanged="ButtonPesquisar" autopostback="true"></asp:TextBox>
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon3"><i class="fas fa-search"></i></span>
                             </div>

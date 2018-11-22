@@ -33,7 +33,7 @@
             <div class="row" style="width: 100%;">
                 <div class="col-12 d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-left: 20px; margin-right: 20px;">
                     <div class="d-flex justify-content-center">
-                        <asp:Button ID="CadCliente" runat="server" Text="Cadastro de Clientes" OnClick="CadCliente_Click" class="btn btn-primary rounded" style="width: 276px;height: 43.992188px;"/>
+                        <asp:Button ID="CadEstado" runat="server" Text="Cadastro de Estados" OnClick="CadEstado_Click" class="btn btn-primary rounded" Style="width: 276px; height: 43.992188px;" />
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
             <div class="row" style="width: 100%;">
                 <div class="col-12 d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-left: 20px; margin-right: 20px;">
                     <div class="d-flex justify-content-center">
-                        <asp:Button ID="CadEstado" runat="server" Text="Cadastro de Estados" OnClick="CadEstado_Click" class="btn btn-primary rounded" style="width: 276px;height: 43.992188px;"/>
+                        <asp:Button ID="CadCidade" runat="server" Text="Cadastro de Cidades" OnClick="CadCidade_Click" class="btn btn-primary rounded" Style="width: 276px; height: 43.992188px;" />
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
             <div class="row" style="width: 100%;">
                 <div class="col-12 d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-left: 20px; margin-right: 20px;">
                     <div class="d-flex justify-content-center">
-                        <asp:Button ID="CadCidade" runat="server" Text="Cadastro de Cidades" OnClick="CadCidade_Click" class="btn btn-primary rounded" style="width: 276px;height: 43.992188px;"/>
+                        <asp:Button ID="CadCliente" runat="server" Text="Cadastro de Clientes" OnClick="CadCliente_Click" class="btn btn-primary rounded" Style="width: 276px; height: 43.992188px;" />
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
             <div class="row" style="width: 100%;">
                 <div class="col-12 d-flex justify-content-center col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-left: 20px; margin-right: 20px;">
                     <div class="d-flex justify-content-center">
-                        <asp:Button ID="CadProduto" runat="server" Text="Cadastro de Produtos" OnClick="CadProduto_Click" class="btn btn-primary rounded" style="width: 276px;height: 43.992188px;"/>
+                        <asp:Button ID="CadProduto" runat="server" Text="Cadastro de Produtos" OnClick="CadProduto_Click" class="btn btn-primary rounded" Style="width: 276px; height: 43.992188px;" />
                     </div>
                 </div>
             </div>
